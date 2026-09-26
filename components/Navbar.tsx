@@ -9,7 +9,7 @@ const navigation = [
   { name: "GIFTING", href: "/gifting" },
   { name: "SHUBH PRASANG", href: "/shubh-prasang" },
   { name: "CANDLES", href: "/candles" },
-  { name: "CONNECT", href: "/connect" },
+  { name: "CONNECT US", href: "/connect" },
 ];
 
 export default function Navbar() {
