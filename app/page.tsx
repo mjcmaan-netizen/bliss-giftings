@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
 import Collections from "@/components/Collections";
-import FeaturedWork from "@/components/FeaturedWork";
+import Reach from "@/components/Reach";
 import BrandStatement from "@/components/BrandStatement";
 import Footer from "@/components/Footer";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <Stats />
       <Collections />
-      <FeaturedWork />
+      <Reach />
       <BrandStatement />
       <Footer />
     </main>
