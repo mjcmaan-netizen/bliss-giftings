@@ -2,32 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* =========================================================
-   BLISS GIFTINGS — GLOBAL STYLES
-   ========================================================= */
-
 :root {
   --ivory: #f7f3ec;
   --cream: #fbf8f2;
-  --warm-white: #fffdf8;
-
   --green: #18352f;
   --deep-green: #102c27;
-  --soft-green: #30433d;
-
   --gold: #b9995b;
   --champagne: #e5cd98;
   --blush: #d9a89a;
   --sage: #aab7a5;
-
   --text: #30433d;
-  --muted: #66736e;
-  --border: rgba(24, 53, 47, 0.12);
 }
-
-/* =========================================================
-   RESET
-   ========================================================= */
 
 *,
 *::before,
@@ -49,15 +34,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body,
-button,
-input,
-textarea,
-select {
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
@@ -83,11 +59,7 @@ a {
 button {
   border: 0;
   background: none;
-}
-
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
@@ -100,4 +72,117 @@ img {
   color: var(--deep-green);
 }
 
-/* =================================================
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 999px;
+}
+
+@media (max-width: 768px) {
+  html {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+
+  main {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+    line-height: 0.98;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.05;
+  }
+
+  h3 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+    line-height: 1.1;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  header > div {
+    height: 72px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  header img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  section.relative.min-h-screen {
+    min-height: 100svh;
+  }
+
+  #collections {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+
+  #collections .grid {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+  }
+
+  footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-top: 64px !important;
+    padding-bottom: 28px !important;
+  }
+
+  footer > div > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+
+  footer h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  a:hover,
+  button:hover {
+    transform: none;
+  }
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
