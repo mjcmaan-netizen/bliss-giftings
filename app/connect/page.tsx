@@ -1,12 +1,15 @@
-import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function ConnectPage() {
   return (
     <main className="min-h-screen bg-[#f7f3ec] text-[#30433d]">
+      <Navbar />
 
       {/* Hero */}
       <section className="relative overflow-hidden bg-[#18352f] px-6 pb-20 pt-36 md:px-10 md:pb-28 md:pt-44 lg:px-14">
         <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full border border-[#e5cd98]/10" />
+
         <div className="pointer-events-none absolute -bottom-48 -left-40 h-[500px] w-[500px] rounded-full border border-[#e5cd98]/10" />
 
         <div className="relative mx-auto max-w-[1300px]">
@@ -27,74 +30,47 @@ export default function ConnectPage() {
           </h1>
 
           <p className="mt-7 max-w-xl text-sm leading-7 text-white/65 md:text-base md:leading-8">
-            Whether you are planning a wedding, creating a corporate gift,
-            looking for a live experience or simply have an idea in mind,
-            we would love to hear from you.
+            Have a celebration in mind, a gifting requirement, or simply an
+            idea you would like to bring to life? Tell us a little about it.
           </p>
         </div>
       </section>
 
-      {/* Form */}
+      {/* Enquiry */}
       <section className="px-6 py-20 md:px-10 md:py-28 lg:px-14">
-        <div className="mx-auto grid max-w-[1300px] gap-16 lg:grid-cols-[0.65fr_1.35fr] lg:gap-24">
+        <div className="mx-auto grid max-w-[1300px] gap-16 lg:grid-cols-[0.6fr_1.4fr] lg:gap-24">
 
-          {/* Left information */}
+          {/* Intro */}
           <div>
             <p className="text-[9px] uppercase tracking-[0.4em] text-[#a8874b]">
-              Start a conversation
+              Start here
             </p>
 
             <h2 className="mt-5 font-serif text-4xl leading-tight text-[#18352f] md:text-5xl">
-              Let&apos;s make
+              Tell us what
               <br />
-              something memorable.
+              you have in mind.
             </h2>
 
             <p className="mt-6 max-w-sm text-sm leading-7 text-[#596b65]">
-              Share a few details with us and our team will get back to you
-              with the next steps.
+              A few details will help us understand your celebration and
+              prepare the right conversation for you.
             </p>
 
             <div className="mt-10 h-px w-16 bg-[#b9995b]" />
 
-            <div className="mt-8">
-              <p className="text-[9px] uppercase tracking-[0.3em] text-[#a8874b]">
-                Directly reach us
-              </p>
-
-              <div className="mt-4 flex flex-col gap-3">
-                <a
-                  href="tel:+919998920644"
-                  className="font-serif text-lg text-[#18352f] transition-colors hover:text-[#a8874b]"
-                >
-                  +91 99989 20644
-                </a>
-
-                <a
-                  href="mailto:Bliss.giftings@outlook.com"
-                  className="break-all text-sm text-[#596b65] transition-colors hover:text-[#a8874b]"
-                >
-                  Bliss.giftings@outlook.com
-                </a>
-              </div>
-            </div>
-
-            <Link
-              href="/"
-              className="mt-10 inline-flex items-center gap-3 text-[9px] uppercase tracking-[0.25em] text-[#a8874b]"
-            >
-              ← Back to Bliss
-            </Link>
+            <p className="mt-8 max-w-sm font-serif text-lg italic leading-7 text-[#596b65]">
+              From one beautiful detail to an entire celebration.
+            </p>
           </div>
 
-          {/* Enquiry form */}
+          {/* Form */}
           <form
             action="https://formsubmit.co/Bliss.giftings@outlook.com"
             method="POST"
-            className="space-y-8"
+            className="space-y-10"
           >
-
-            {/* FormSubmit settings */}
+            {/* FormSubmit configuration */}
             <input
               type="hidden"
               name="_subject"
@@ -119,13 +95,13 @@ export default function ConnectPage() {
               value="https://bliss-giftings.vercel.app/connect?submitted=true"
             />
 
-            {/* Your details */}
+            {/* Your Details */}
             <div>
               <p className="mb-6 text-[9px] uppercase tracking-[0.35em] text-[#a8874b]">
                 Your Details
               </p>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-7 md:grid-cols-2">
 
                 <div>
                   <label className="mb-2 block text-[10px] uppercase tracking-[0.2em] text-[#596b65]">
@@ -171,13 +147,13 @@ export default function ConnectPage() {
               </div>
             </div>
 
-            {/* Celebration */}
+            {/* Event Details */}
             <div>
               <p className="mb-6 text-[9px] uppercase tracking-[0.35em] text-[#a8874b]">
-                Your Celebration
+                Event Details
               </p>
 
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-7 md:grid-cols-2">
 
                 <div>
                   <label className="mb-2 block text-[10px] uppercase tracking-[0.2em] text-[#596b65]">
@@ -198,11 +174,15 @@ export default function ConnectPage() {
                     <option>Roka / Baat Pakki</option>
                     <option>Mehendi</option>
                     <option>Haldi</option>
+                    <option>Janoi</option>
+                    <option>Mandva</option>
+                    <option>Reception</option>
                     <option>Baby Shower</option>
                     <option>Naming Ceremony</option>
                     <option>Housewarming</option>
-                    <option>Corporate Event</option>
+                    <option>Ganesh Puja</option>
                     <option>Birthday</option>
+                    <option>Corporate Event</option>
                     <option>Other</option>
                   </select>
                 </div>
@@ -252,7 +232,7 @@ export default function ConnectPage() {
             {/* Services */}
             <div>
               <p className="mb-5 text-[9px] uppercase tracking-[0.35em] text-[#a8874b]">
-                What can Bliss help with?
+                What are you looking for?
               </p>
 
               <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
@@ -277,6 +257,7 @@ export default function ConnectPage() {
                       value={service}
                       className="accent-[#b9995b]"
                     />
+
                     {service}
                   </label>
                 ))}
@@ -287,7 +268,7 @@ export default function ConnectPage() {
             {/* Message */}
             <div>
               <label className="mb-2 block text-[10px] uppercase tracking-[0.2em] text-[#596b65]">
-                Tell us about your requirements
+                Tell us more
               </label>
 
               <textarea
@@ -299,12 +280,13 @@ export default function ConnectPage() {
             </div>
 
             {/* Submit */}
-            <div className="pt-2">
+            <div className="pt-1">
               <button
                 type="submit"
                 className="group inline-flex items-center gap-5 bg-[#18352f] px-8 py-4 text-[9px] font-semibold uppercase tracking-[0.25em] text-[#fffaf2] transition-all duration-500 hover:bg-[#b9995b]"
               >
                 Send Enquiry
+
                 <span className="transition-transform duration-300 group-hover:translate-x-1">
                   →
                 </span>
@@ -314,6 +296,8 @@ export default function ConnectPage() {
           </form>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
