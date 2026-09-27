@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const collections = [
   {
@@ -8,10 +9,12 @@ const collections = [
     title: "Gifting",
     subtitle: "Thoughtfully curated.",
     description:
-      "Corporate gifting, festive gifting, return favours, hampers and personalised creations — brought together for every kind of giving.",
+      "Corporate gifting · Festive gifting · Return favours · Hampers · Personalised gifting",
     href: "/gifting",
-    image:
-      "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1800&q=90",
+    images: [
+      "/gifting-hamper-01.jpg",
+      "/gifting-hamper-02.jpg",
+    ],
     size: "large",
   },
   {
@@ -21,8 +24,10 @@ const collections = [
     description:
       "Thoughtful details for weddings, ceremonies and the beautiful occasions that bring people together.",
     href: "/shubh-prasang",
-    image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1400&q=90",
+    images: [
+      "/shubh-prasang-mehendi-01.jpg",
+      "/shubh-prasang-02.jpg",
+    ],
     size: "small",
   },
   {
@@ -32,11 +37,46 @@ const collections = [
     description:
       "Handcrafted creations made to bring warmth, beauty and a little more bliss to gifting and celebrations.",
     href: "/candles",
-    image:
-      "https://images.unsplash.com/photo-1602874801006-e26b9c2e4e1c?auto=format&fit=crop&w=1400&q=90",
+    images: [
+      "/candle-floral-bouquet-01.jpg",
+      "/candle-02 (1).jpg",
+    ],
     size: "small",
   },
 ];
+
+function CollectionImage({
+  images,
+  alt,
+}: {
+  images: string[];
+  alt: string;
+}) {
+  const [activeImage, setActiveImage] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveImage((current) => (current + 1) % images.length);
+    }, 5000);
+
+    return () => clearInterval(timer);
+  }, [images.length]);
+
+  return (
+    <div className="absolute inset-0">
+      {images.map((image, index) => (
+        <img
+          key={image}
+          src={image}
+          alt={alt}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-[1400ms] ease-in-out ${
+            activeImage === index ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Collections() {
   return (
@@ -45,7 +85,6 @@ export default function Collections() {
       className="relative overflow-hidden bg-[#f7f3ec] px-5 py-24 md:px-10 md:py-32 lg:px-14 lg:py-36"
     >
       <div className="mx-auto max-w-[1450px]">
-        {/* Section introduction */}
         <div className="grid gap-8 md:grid-cols-[1fr_1.1fr] md:items-end">
           <div>
             <div className="flex items-center gap-4">
@@ -74,17 +113,15 @@ export default function Collections() {
           </div>
         </div>
 
-        {/* Editorial collection layout */}
         <div className="mt-16 grid gap-5 md:mt-20 md:grid-cols-[1.18fr_0.82fr]">
           {/* Gifting */}
           <Link
             href={collections[0].href}
             className="group relative block min-h-[520px] overflow-hidden md:min-h-[680px]"
           >
-            <img
-              src={collections[0].image}
-              alt="Gifting"
-              className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
+            <CollectionImage
+              images={collections[0].images}
+              alt="Bliss Giftings hampers"
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#071b17]/90 via-[#102c27]/25 to-transparent" />
@@ -105,8 +142,7 @@ export default function Collections() {
               </h3>
 
               <p className="mt-5 max-w-xl text-sm leading-7 text-white/75 md:text-base md:leading-8">
-                Corporate gifting · Festive gifting · Return favours · Hampers
-                · Personalised gifting
+                {collections[0].description}
               </p>
 
               <div className="mt-7 flex items-center gap-4">
@@ -123,7 +159,7 @@ export default function Collections() {
             </div>
           </Link>
 
-          {/* Right column */}
+          {/* Shubh Prasang + Candles */}
           <div className="grid gap-5">
             {collections.slice(1).map((collection) => (
               <Link
@@ -131,10 +167,9 @@ export default function Collections() {
                 href={collection.href}
                 className="group relative block min-h-[330px] overflow-hidden md:min-h-0"
               >
-                <img
-                  src={collection.image}
+                <CollectionImage
+                  images={collection.images}
                   alt={collection.title}
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-[#071b17]/90 via-[#102c27]/25 to-transparent" />
@@ -171,7 +206,6 @@ export default function Collections() {
           </div>
         </div>
 
-        {/* Closing line */}
         <div className="mt-14 flex flex-col gap-5 border-t border-[#18352f]/10 pt-7 md:flex-row md:items-center md:justify-between">
           <p className="font-serif text-lg italic text-[#53645f] md:text-xl">
             Every creation begins with a moment worth celebrating.
