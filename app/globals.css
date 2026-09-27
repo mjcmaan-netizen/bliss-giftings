@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* =========================================================
-   BLISS GIFTINGS — GLOBAL DESIGN SYSTEM
+   BLISS GIFTINGS — GLOBAL STYLES
    ========================================================= */
 
 :root {
@@ -38,6 +38,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--ivory);
+  overflow-x: hidden;
 }
 
 body {
@@ -79,14 +80,14 @@ a {
   text-decoration: none;
 }
 
-button,
-a {
-  -webkit-tap-highlight-color: transparent;
-}
-
 button {
   border: 0;
   background: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
@@ -99,88 +100,4 @@ img {
   color: var(--deep-green);
 }
 
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--ivory);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gold);
-  border-radius: 999px;
-}
-
-/* =========================================================
-   MOBILE FOUNDATION
-   ========================================================= */
-
-@media (max-width: 768px) {
-  html {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  body {
-    width: 100%;
-    min-width: 320px;
-    overflow-x: hidden;
-    background: var(--ivory);
-  }
-
-  main {
-    width: 100%;
-    overflow-x: hidden;
-  }
-
-  section {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  h1 {
-    font-size: clamp(2.6rem, 12vw, 4rem);
-    line-height: 0.98;
-  }
-
-  h2 {
-    font-size: clamp(2rem, 9vw, 3rem);
-    line-height: 1.05;
-  }
-
-  h3 {
-    font-size: clamp(1.6rem, 7vw, 2.2rem);
-    line-height: 1.1;
-  }
-
-  p {
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
-}
-
-/* =========================================================
-   SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 390px) {
-  h1 {
-    font-size: 2.55rem;
-  h2 {
-    font-size: 2rem;
-  }
-
-  p {
-    font-size: 0.86rem;
-    line-height: 1.65;
-  }
-  }
+/* =================================================
