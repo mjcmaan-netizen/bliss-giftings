@@ -1,10 +1,49 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+const locations = [
+  // USA — New York
+  { left: "29.4%", top: "27.4%" },
+
+  // UK — Birmingham
+  { left: "49.5%", top: "20.8%" },
+
+  // UAE — Dubai + Sharjah
+  { left: "65.35%", top: "36.0%" },
+  { left: "65.45%", top: "35.8%" },
+
+  // Maldives
+  { left: "70.3%", top: "48.2%" },
+
+  // India
+  { left: "71.4%", top: "34.1%" }, // Delhi
+  { left: "70.6%", top: "41.4%" }, // Goa
+  { left: "70.25%", top: "39.4%" }, // Mumbai
+  { left: "70.5%", top: "39.7%" }, // Pune
+  { left: "71.7%", top: "38.3%" }, // Nagpur
+  { left: "70.2%", top: "37.3%" }, // Ahmedabad
+  { left: "69.8%", top: "37.0%" }, // Rajkot
+  { left: "70.9%", top: "37.0%" }, // Vadodara
+];
+
 export default function Reach() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setVisible(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-[#18352f] px-5 py-24 md:px-10 md:py-32 lg:px-14 lg:py-36">
       <div className="mx-auto max-w-[1500px]">
-        <div className="grid items-center gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-16">
           
-          {/* Copy */}
+          {/* Text */}
           <div className="relative z-10">
             <div className="flex items-center gap-4">
               <span className="h-px w-10 bg-[#d8bd82]" />
@@ -26,26 +65,44 @@ export default function Reach() {
             </p>
           </div>
 
-          {/* World map */}
-          <div className="relative min-h-[280px] overflow-hidden md:min-h-[420px] lg:min-h-[500px]">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="relative w-full max-w-[900px]">
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
-                  alt=""
-                  aria-hidden="true"
-                  className="w-full opacity-[0.18] brightness-0 invert"
-                />
+          {/* Map */}
+          <div className="relative w-full">
+            <div className="relative mx-auto aspect-[2/1] w-full max-w-[1000px] overflow-hidden">
+              
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-contain opacity-[0.18] brightness-0 invert"
+              />
 
-                {/* Soft geographic glow — deliberately label-free */}
-                <div className="pointer-events-none absolute left-[55%] top-[43%] h-32 w-32 rounded-full bg-[#e5cd98]/20 blur-3xl md:h-48 md:w-48" />
+              {/* Soft fade around the map */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#18352f] via-transparent to-[#18352f]" />
 
-                <div className="pointer-events-none absolute left-[67%] top-[38%] h-24 w-24 rounded-full bg-[#d9a89a]/15 blur-3xl md:h-36 md:w-36" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#18352f]/30 via-transparent to-[#18352f]/40" />
 
-                <div className="pointer-events-none absolute left-[30%] top-[40%] h-20 w-20 rounded-full bg-[#e5cd98]/10 blur-3xl md:h-32 md:w-32" />
-
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#18352f] via-transparent to-[#18352f]/30" />
-              </div>
+              {/* Actual Bliss locations */}
+              {locations.map((location, index) => (
+                <span
+                  key={`${location.left}-${location.top}-${index}`}
+                  className={`absolute z-10 h-[7px] w-[7px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#e5cd98] shadow-[0_0_10px_3px_rgba(229,205,152,0.55)] transition-all duration-1000 ${
+                    visible ? "scale-100 opacity-100" : "scale-0 opacity-0"
+                  }`}
+                  style={{
+                    left: location.left,
+                    top: location.top,
+                    animationDelay: `${index * 140}ms`,
+                  }}
+                >
+                  <span
+                    className="absolute inset-[-7px] rounded-full border border-[#e5cd98]/35"
+                    style={{
+                      animation: "reachPulse 2.8s ease-out infinite",
+                      animationDelay: `${index * 180}ms`,
+                    }}
+                  />
+                </span>
+              ))}
             </div>
           </div>
         </div>
@@ -56,6 +113,31 @@ export default function Reach() {
           </p>
         </div>
       </div>
+
+      <style jsx>{`
+        @keyframes reachPulse {
+          0% {
+            transform: scale(0.65);
+            opacity: 0.7;
+          }
+
+          70% {
+            transform: scale(1.8);
+            opacity: 0;
+          }
+
+          100% {
+            transform: scale(1.8);
+            opacity: 0;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          span {
+            animation: none !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
