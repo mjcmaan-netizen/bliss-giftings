@@ -37,12 +37,29 @@ function LinkedInIcon() {
   );
 }
 
+function PhoneIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.7"
+      className="h-5 w-5"
+      aria-hidden="true"
+    >
+      <path
+        d="M6.6 2.8 4.8 3.9c-.9.5-1.3 1.6-1 2.6 1.8 6.3 6.4 10.9 12.7 12.7 1 .3 2.1-.1 2.6-1l1.1-1.8c.4-.7.2-1.6-.5-2l-3.2-1.9c-.6-.4-1.4-.2-1.8.4l-.9 1.2a13.3 13.3 0 0 1-4.9-4.9l1.2-.9c.6-.4.8-1.2.4-1.8L8.6 3.3c-.4-.7-1.3-.9-2-.5Z"
+      />
+    </svg>
+  );
+}
+
 function WhatsAppIcon() {
   return (
     <svg
       viewBox="0 0 24 24"
       fill="currentColor"
-      className="h-6 w-6"
+      className="h-5 w-5"
       aria-hidden="true"
     >
       <path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .4 5.2.4 11.7c0 2.1.5 4.1 1.6 5.9L.3 24l6.5-1.7a11.7 11.7 0 0 0 5.3 1.3h.1c6.5 0 11.7-5.2 11.7-11.7 0-3.1-1.2-6.1-3.4-8.4ZM12.1 21.6c-1.7 0-3.3-.4-4.8-1.3l-.3-.2-3.9 1 1-3.8-.2-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.8 9.8 0 0 1 2.9 6.9c0 5.5-4.4 9.9-9.9 9.9Zm5.4-7.4c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.3-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.9 4.4 1.8.8 2.5.9 3.4.8.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.5Z" />
@@ -69,10 +86,10 @@ function MailIcon() {
 export default function Footer() {
   return (
     <>
-      <footer className="bg-[#f7f3ec] px-6 pb-8 pt-16 md:px-10 md:pb-10 md:pt-20 lg:px-14">
+      <footer className="bg-[#f7f3ec] px-6 pb-8 pt-14 md:px-10 md:pb-10 md:pt-18 lg:px-14">
         <div className="mx-auto max-w-[1500px]">
 
-          <div className="grid gap-12 border-b border-[#18352f]/10 pb-12 md:grid-cols-[1.2fr_0.8fr_1fr] md:gap-16">
+          <div className="grid gap-12 border-b border-[#18352f]/10 pb-12 md:grid-cols-[1.2fr_0.8fr_0.8fr] md:gap-16">
 
             {/* Brand */}
             <div>
@@ -82,16 +99,18 @@ export default function Footer() {
               </h2>
 
               <p className="mt-4 max-w-sm text-sm leading-7 text-[#596b65]">
-                Thoughtfully created for life&apos;s beautiful moments.
+                Gifts, celebrations and handcrafted details for life&apos;s
+                beautiful moments.
               </p>
 
               {/* Social Icons */}
               <div className="mt-7 flex items-center gap-5 text-[#b9995b]">
+
                 <a
                   href="https://www.instagram.com/bliss_giftings/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Bliss Giftings on Instagram"
+                  aria-label="Instagram"
                   className="transition-all duration-300 hover:-translate-y-1 hover:text-[#18352f]"
                 >
                   <InstagramIcon />
@@ -101,19 +120,38 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/bliss-giftings/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Bliss Giftings on LinkedIn"
+                  aria-label="LinkedIn"
                   className="transition-all duration-300 hover:-translate-y-1 hover:text-[#18352f]"
                 >
                   <LinkedInIcon />
                 </a>
 
                 <a
+                  href="tel:+919998920644"
+                  aria-label="Call Bliss Giftings"
+                  className="transition-all duration-300 hover:-translate-y-1 hover:text-[#18352f]"
+                >
+                  <PhoneIcon />
+                </a>
+
+                <a
+                  href="https://wa.me/919998920644"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp"
+                  className="transition-all duration-300 hover:-translate-y-1 hover:text-[#18352f]"
+                >
+                  <WhatsAppIcon />
+                </a>
+
+                <a
                   href="mailto:Bliss.giftings@outlook.com"
-                  aria-label="Email Bliss Giftings"
+                  aria-label="Email"
                   className="transition-all duration-300 hover:-translate-y-1 hover:text-[#18352f]"
                 >
                   <MailIcon />
                 </a>
+
               </div>
             </div>
 
@@ -136,30 +174,21 @@ export default function Footer() {
               </nav>
             </div>
 
-            {/* Contact */}
+            {/* Social / Contact */}
             <div>
               <p className="text-[9px] uppercase tracking-[0.35em] text-[#a8874b]">
-                Contact
+                Stay Connected
               </p>
 
-              <div className="mt-5 flex flex-col gap-4 text-sm text-[#596b65]">
-                <a
-                  href="https://wa.me/919998920644"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors duration-300 hover:text-[#a8874b]"
-                >
-                  +91 99989 20644
-                </a>
+              <p className="mt-5 max-w-xs font-serif text-lg leading-7 text-[#18352f]">
+                Find Bliss wherever you are.
+              </p>
 
-                <a
-                  href="mailto:Bliss.giftings@outlook.com"
-                  className="break-all transition-colors duration-300 hover:text-[#a8874b]"
-                >
-                  Bliss.giftings@outlook.com
-                </a>
-              </div>
+              <p className="mt-3 text-sm leading-6 text-[#596b65]">
+                Follow our latest creations, celebrations and gifting ideas.
+              </p>
             </div>
+
           </div>
 
           {/* Bottom */}
@@ -172,6 +201,7 @@ export default function Footer() {
               Crafted in India
             </p>
           </div>
+
         </div>
       </footer>
 
