@@ -1,139 +1,119 @@
-import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const prasangs = [
-  // WEDDING & PRE-WEDDING
   {
     name: "Baat Pakki",
     category: "Wedding & Pre-Wedding",
     image:
-      "https://images.unsplash.com/photo-1606800052052-a08af7148866",
+      "https://www.google.com/search?client=ms-android-nothing-terr1-reo3&hs=C52V&sca_esv=080dae4805299e94&sxsrf=APpeQnv_OmPEjzQjnsf1XaTkbs6rLIGLXw:1790592838486&udm=2&fbs=ABfTbFXXq5_lq1-qc-RNbCT-iVCvZUY4OllCx8eHi2DBbGa2PoUPiBop7GRck9_ggqJeBKn6MPa4i3PVHgXv4WYtWNsfy3WXyyzlh9YFkB6yl-mFA6RdF86VFRSu1TdReUTnMXEcx7xyCs3vrClsGNwZAtjY8pOka6OewQ0F88P1LvFuoBn0EWiNAGxLKVqOSTWbuZwNyJ3M-ebcTyQGYGlOi_Bt-NXVldICDnbK6zHFzzO-c7ihdeg&q=baat+pakki",
   },
   {
     name: "Engagement",
     category: "Wedding & Pre-Wedding",
     image:
-      "https://images.pexels.com/photos/31733607/pexels-photo-31733607.jpeg",
+      "https://www.google.com/search?client=ms-android-nothing-terr1-reo3&hs=ZkNB&sca_esv=080dae4805299e94&sxsrf=APpeQnuM791rpT_aQEp9Ny9BSj45P7ClZw:1790592879809&udm=2&fbs=ABfTbFXmzBGw9LECshVETHbdczUekrr4P3jxmDQ00QvQP6rDCfvRDF3m1JTFCpkx8Z4iq9zhL2WVxpvyM7bUx2m9DqWBh23JCnQShnxJs64FiD7l-rfNr49SYKeWV3qCiaEd61PA0D0jl7m92vrtd9I1uwsehWnNgE7n0Df83cnWurx88bzYwHDzLOc9ISVlWDyDp7P7GYChZSfelcJxM6aGpcm5xlDC1nfkH45ZppCtfP82Pwyh52Y&q=engagement",
   },
   {
     name: "Kankotri Lekhan",
     category: "Wedding & Pre-Wedding",
     image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+      "https://www.google.com/search?client=ms-android-nothing-terr1-reo3&hs=sPiq&sca_esv=080dae4805299e94&sxsrf=APpeQntZdkLDN0kYMYk3H301rG-uOpJ-LA:1790592907583&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832VstEKsVDqPorK0Gahnm2nq-aQnTz_mBV-EZYISbLc-StUIq_PhL7hb0Qt0YiIGOHkJjnTZ-cOFt4MBdBh9xxUSVRKmiEusZuD8DlVlOopefENvkiM3UgC_ep-24yehGm1ryqNEd5H2ziPusS84gJQMy7Mt2qU02wrAARl5mmE-5i7hhPffmt2bjoXn9viPnBdbTsEw&q=kankotri+lekhan",
   },
   {
     name: "Mehendi",
     category: "Wedding & Pre-Wedding",
     image:
-      "https://images.pexels.com/photos/32029488/pexels-photo-32029488.jpeg",
+      "https://www.google.com/search?q=mehendi+decoration&client=ms-android-nothing-terr1-reo3&hs=akNB&sca_esv=080dae4805299e94&udm=2&biw=411&bih=783",
   },
   {
     name: "Haldi",
     category: "Wedding & Pre-Wedding",
     image:
-      "https://images.pexels.com/photos/33078524/pexels-photo-33078524.jpeg",
+      "https://www.google.com/search?sa=X&sca_esv=080dae4805299e94&udm=2&q=haldi+decoration+balloons&biw=411&bih=783",
   },
+
+  // TEMPORARY PLACEHOLDERS
   {
     name: "Sangeet",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552",
+    image: "",
   },
   {
     name: "Mandva",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1544078751-58fee2d8a03b",
+    image: "",
   },
   {
     name: "Ganesh Puja",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1604881991720-f91add269bed",
+    image: "",
   },
   {
     name: "Mameru",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1583939003579-730e3918a45a",
+    image: "",
   },
   {
     name: "Shadi",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc",
+    image: "",
   },
   {
     name: "Wedding Reception",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+    image: "",
   },
   {
     name: "Bachelorette",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://images.unsplash.com/photo-1529636798458-92182e662485",
+    image: "",
   },
-
-  // TRADITIONAL & FAMILY
   {
     name: "Janoi / Upanayan Sanskar",
     category: "Traditional & Family",
-    image:
-      "https://images.unsplash.com/photo-1609220136736-443140cffec6",
+    image: "",
   },
   {
     name: "Annaprashan",
     category: "Traditional & Family",
-    image:
-      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4",
+    image: "",
   },
   {
     name: "Mundan Ceremony",
     category: "Traditional & Family",
-    image:
-      "https://images.unsplash.com/photo-1519689680058-324335c77eba",
+    image: "",
   },
   {
     name: "Housewarming",
     category: "Traditional & Family",
-    image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    image: "",
   },
   {
     name: "Puja & Religious Celebrations",
     category: "Traditional & Family",
-    image:
-      "https://images.unsplash.com/photo-1604608672516-f1b9d2d3d8b7",
+    image: "",
   },
-
-  // BABY & MILESTONES
   {
     name: "Baby Shower",
     category: "Baby & Milestones",
-    image:
-      "https://images.unsplash.com/photo-1523438885200-e635ba2c371e",
+    image: "",
   },
   {
     name: "Naming Ceremony",
     category: "Baby & Milestones",
-    image:
-      "https://images.unsplash.com/photo-1544126566-47401c6f6b6a",
+    image: "",
   },
   {
     name: "Birthday",
     category: "Baby & Milestones",
-    image:
-      "https://images.unsplash.com/photo-1464349153735-7db50ed83c84",
+    image: "",
   },
   {
     name: "Anniversary",
     category: "Baby & Milestones",
-    image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552",
+    image: "",
   },
 ];
 
@@ -151,16 +131,7 @@ export default function ShubhPrasangPage() {
       {/* HERO */}
       <section className="relative min-h-[72vh] overflow-hidden bg-[#18352f]">
         <div className="absolute inset-0">
-          <Image
-            src="https://images.unsplash.com/photo-1519741497674-611481863552"
-            alt="Indian wedding celebration"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-55"
-          />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102c27]/90 via-[#18352f]/60 to-[#18352f]/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#102c27] via-[#18352f]/90 to-[#18352f]/70" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-7xl items-end px-6 pb-20 md:px-12 md:pb-28">
@@ -207,7 +178,7 @@ export default function ShubhPrasangPage() {
         </div>
       </section>
 
-      {/* PRASANG CATEGORIES */}
+      {/* PRASANGS */}
       <section className="px-6 pb-24 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
           {categories.map((category) => {
@@ -234,14 +205,20 @@ export default function ShubhPrasangPage() {
                       href="#"
                       className="group block"
                     >
-                      <div className="relative aspect-[4/5] overflow-hidden bg-[#e9e3d9]">
-                        <Image
-                          src={prasang.image}
-                          alt={prasang.name}
-                          fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                          className="object-cover transition duration-700 ease-out group-hover:scale-105"
-                        />
+                      <div className="relative aspect-[4/5] overflow-hidden bg-[#ddd6ca]">
+                        {prasang.image ? (
+                          <img
+                            src={prasang.image}
+                            alt={prasang.name}
+                            className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
+                          />
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center bg-[#e9e3d9]">
+                            <span className="px-6 text-center font-serif text-xl text-[#18352f]/50">
+                              Image coming soon
+                            </span>
+                          </div>
+                        )}
 
                         <div className="absolute inset-0 bg-gradient-to-t from-[#102c27]/90 via-transparent to-transparent" />
 
