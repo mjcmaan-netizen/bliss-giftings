@@ -4,110 +4,136 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const prasangs = [
+  // WEDDING & PRE-WEDDING
   {
     name: "Baat Pakki",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/baat-pakki.jpg",
+    image:
+      "https://images.unsplash.com/photo-1606800052052-a08af7148866",
   },
   {
     name: "Engagement",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/engagement.jpg",
+    image:
+      "https://images.pexels.com/photos/31733607/pexels-photo-31733607.jpeg",
   },
   {
     name: "Kankotri Lekhan",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/kankotri-lekhan.jpg",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
   },
   {
     name: "Mehendi",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/mehendi.jpg",
+    image:
+      "https://images.pexels.com/photos/32029488/pexels-photo-32029488.jpeg",
   },
   {
     name: "Haldi",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/haldi.jpg",
+    image:
+      "https://images.pexels.com/photos/33078524/pexels-photo-33078524.jpeg",
   },
   {
     name: "Sangeet",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/sangeet.jpg",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552",
   },
   {
     name: "Mandva",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/mandva.jpg",
+    image:
+      "https://images.unsplash.com/photo-1544078751-58fee2d8a03b",
   },
   {
     name: "Ganesh Puja",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/ganesh-puja.jpg",
+    image:
+      "https://images.unsplash.com/photo-1604881991720-f91add269bed",
   },
   {
     name: "Mameru",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/mameru.jpg",
+    image:
+      "https://images.unsplash.com/photo-1583939003579-730e3918a45a",
   },
   {
     name: "Shadi",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/shadi.jpg",
+    image:
+      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc",
   },
   {
     name: "Wedding Reception",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/wedding-reception.jpg",
+    image:
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
   },
   {
-    name: "Bridal Shower",
+    name: "Bachelorette",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/bridal-shower.jpg",
+    image:
+      "https://images.unsplash.com/photo-1529636798458-92182e662485",
   },
+
+  // TRADITIONAL & FAMILY
   {
     name: "Janoi / Upanayan Sanskar",
     category: "Traditional & Family",
-    image: "/prasangs/janoi.jpg",
+    image:
+      "https://images.unsplash.com/photo-1609220136736-443140cffec6",
   },
   {
     name: "Annaprashan",
     category: "Traditional & Family",
-    image: "/prasangs/annaprashan.jpg",
+    image:
+      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4",
   },
   {
     name: "Mundan Ceremony",
     category: "Traditional & Family",
-    image: "/prasangs/mundan.jpg",
+    image:
+      "https://images.unsplash.com/photo-1519689680058-324335c77eba",
   },
   {
     name: "Housewarming",
     category: "Traditional & Family",
-    image: "/prasangs/housewarming.jpg",
+    image:
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
   },
   {
     name: "Puja & Religious Celebrations",
     category: "Traditional & Family",
-    image: "/prasangs/puja.jpg",
+    image:
+      "https://images.unsplash.com/photo-1604608672516-f1b9d2d3d8b7",
   },
+
+  // BABY & MILESTONES
   {
     name: "Baby Shower",
     category: "Baby & Milestones",
-    image: "/prasangs/baby-shower.jpg",
+    image:
+      "https://images.unsplash.com/photo-1523438885200-e635ba2c371e",
   },
   {
     name: "Naming Ceremony",
     category: "Baby & Milestones",
-    image: "/prasangs/naming-ceremony.jpg",
+    image:
+      "https://images.unsplash.com/photo-1544126566-47401c6f6b6a",
   },
   {
     name: "Birthday",
     category: "Baby & Milestones",
-    image: "/prasangs/birthday.jpg",
+    image:
+      "https://images.unsplash.com/photo-1464349153735-7db50ed83c84",
   },
   {
     name: "Anniversary",
     category: "Baby & Milestones",
-    image: "/prasangs/anniversary.jpg",
+    image:
+      "https://images.unsplash.com/photo-1519741497674-611481863552",
   },
 ];
 
@@ -126,13 +152,14 @@ export default function ShubhPrasangPage() {
       <section className="relative min-h-[72vh] overflow-hidden bg-[#18352f]">
         <div className="absolute inset-0">
           <Image
-            src="/prasangs/shubh-prasang-hero.jpg"
-            alt="Shubh Prasang celebrations"
+            src="https://images.unsplash.com/photo-1519741497674-611481863552"
+            alt="Indian wedding celebration"
             fill
             priority
             sizes="100vw"
             className="object-cover opacity-55"
           />
+
           <div className="absolute inset-0 bg-gradient-to-r from-[#102c27]/90 via-[#18352f]/60 to-[#18352f]/30" />
         </div>
 
@@ -180,10 +207,9 @@ export default function ShubhPrasangPage() {
         </div>
       </section>
 
-      {/* PRASANGS */}
+      {/* PRASANG CATEGORIES */}
       <section className="px-6 pb-24 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
-
           {categories.map((category) => {
             const categoryPrasangs = prasangs.filter(
               (prasang) => prasang.category === category
@@ -191,21 +217,17 @@ export default function ShubhPrasangPage() {
 
             return (
               <div key={category} className="mb-20 last:mb-0">
+                <div className="mb-8">
+                  <p className="mb-2 text-xs uppercase tracking-[0.28em] text-[#b9995b]">
+                    Explore
+                  </p>
 
-                <div className="mb-8 flex items-end justify-between gap-6">
-                  <div>
-                    <p className="mb-2 text-xs uppercase tracking-[0.28em] text-[#b9995b]">
-                      Explore
-                    </p>
-
-                    <h2 className="font-serif text-3xl text-[#18352f] md:text-4xl">
-                      {category}
-                    </h2>
-                  </div>
+                  <h2 className="font-serif text-3xl text-[#18352f] md:text-4xl">
+                    {category}
+                  </h2>
                 </div>
 
                 <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
                   {categoryPrasangs.map((prasang) => (
                     <Link
                       key={prasang.name}
@@ -221,7 +243,7 @@ export default function ShubhPrasangPage() {
                           className="object-cover transition duration-700 ease-out group-hover:scale-105"
                         />
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#102c27]/85 via-transparent to-transparent opacity-80" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#102c27]/90 via-transparent to-transparent" />
 
                         <div className="absolute bottom-0 left-0 right-0 p-6">
                           <h3 className="font-serif text-2xl text-[#fbf8f2]">
@@ -238,12 +260,10 @@ export default function ShubhPrasangPage() {
                       </div>
                     </Link>
                   ))}
-
                 </div>
               </div>
             );
           })}
-
         </div>
       </section>
 
