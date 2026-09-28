@@ -8,114 +8,114 @@ const prasangs = [
   {
     name: "Baat Pakki",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/baat-pakki.jpg",
+    image: "/products/prasangs/baat-pakki.jpg",
   },
   {
     name: "Engagement",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/engagement.jpg",
+    image: "/products/prasangs/engagement.jpg",
   },
   {
     name: "Kankotri Lekhan",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/kankotri-lekhan.jpg",
+    image: "/products/prasangs/kankotri-lekhan.jpg",
   },
   {
     name: "Mehendi",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/mehendi.jpg",
+    image: "/products/prasangs/mehendi.jpg",
   },
   {
     name: "Haldi",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/haldi.jpg",
+    image: "/products/prasangs/haldi.jpg",
   },
   {
     name: "Sangeet",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/sangeet.jpg",
+    image: "/products/prasangs/sangeet.jpg",
   },
   {
     name: "Ganesh Puja",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/ganesh-puja.jpg",
+    image: "/products/prasangs/ganesh-puja.jpg",
   },
   {
     name: "Mata Ki Chowki",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/mata-ki-chowki.jpg",
+    image: "/products/prasangs/mata-ki-chowki.jpg",
   },
   {
     name: "Mameru",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/mameru.jpg",
+    image: "/products/prasangs/mameru.jpg",
   },
   {
     name: "Shadi",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/shadi.jpg",
+    image: "/products/prasangs/shadi.jpg",
   },
   {
     name: "Wedding Reception",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/wedding-reception.jpg",
+    image: "/products/prasangs/wedding-reception.jpg",
   },
   {
     name: "Bachelorette",
     category: "Wedding & Pre-Wedding",
-    image: "/prasangs/bachelorette.jpg",
+    image: "/products/prasangs/bachelorette.jpg",
   },
 
   // TRADITIONAL & FAMILY CELEBRATIONS
   {
     name: "Janoi / Upanayan Sanskar",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/janoi.jpg",
+    image: "/products/prasangs/janoi.jpg",
   },
   {
     name: "Annaprashan",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/annaprashan.jpg",
+    image: "/products/prasangs/annaprashan.jpg",
   },
   {
     name: "Mundan Ceremony",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/mundan.jpg",
+    image: "/products/prasangs/mundan.jpg",
   },
   {
     name: "Housewarming",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/housewarming.jpg",
+    image: "/products/prasangs/housewarming.jpg",
   },
   {
     name: "Puja & Religious Celebrations",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/puja.jpg",
+    image: "/products/prasangs/puja.jpg",
   },
   {
     name: "Jiyanu",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/jiyanu.jpg",
+    image: "/products/prasangs/jiyanu.jpg",
   },
   {
     name: "Baby Shower",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/baby-shower.jpg",
+    image: "/products/prasangs/baby-shower.jpg",
   },
   {
     name: "Naming Ceremony",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/naming-ceremony.jpg",
+    image: "/products/prasangs/naming-ceremony.jpg",
   },
   {
     name: "Birthday",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/birthday.jpg",
+    image: "/products/prasangs/birthday.jpg",
   },
   {
     name: "Anniversary",
     category: "Traditional & Family Celebrations",
-    image: "/prasangs/anniversary.jpg",
+    image: "/products/prasangs/anniversary.jpg",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function ShubhPrasangPage() {
       <section className="relative min-h-[72vh] overflow-hidden bg-[#18352f]">
         <div className="absolute inset-0">
           <Image
-            src="/prasangs/shubh-prasang-hero.jpg"
+            src="/products/prasangs/shubh-prasang-hero.jpg"
             alt="Shubh Prasang celebrations"
             fill
             priority
@@ -293,4 +293,4 @@ export default function ShubhPrasangPage() {
       <Footer />
     </main>
   );
-}
+        }
