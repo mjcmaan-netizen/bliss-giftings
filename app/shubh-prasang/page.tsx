@@ -1,119 +1,123 @@
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const prasangs = [
+  // WEDDING & PRE-WEDDING
   {
     name: "Baat Pakki",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://www.google.com/search?client=ms-android-nothing-terr1-reo3&hs=C52V&sca_esv=080dae4805299e94&sxsrf=APpeQnv_OmPEjzQjnsf1XaTkbs6rLIGLXw:1790592838486&udm=2&fbs=ABfTbFXXq5_lq1-qc-RNbCT-iVCvZUY4OllCx8eHi2DBbGa2PoUPiBop7GRck9_ggqJeBKn6MPa4i3PVHgXv4WYtWNsfy3WXyyzlh9YFkB6yl-mFA6RdF86VFRSu1TdReUTnMXEcx7xyCs3vrClsGNwZAtjY8pOka6OewQ0F88P1LvFuoBn0EWiNAGxLKVqOSTWbuZwNyJ3M-ebcTyQGYGlOi_Bt-NXVldICDnbK6zHFzzO-c7ihdeg&q=baat+pakki",
+    image: "/prasangs/baat-pakki.jpg",
   },
   {
     name: "Engagement",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://www.google.com/search?client=ms-android-nothing-terr1-reo3&hs=ZkNB&sca_esv=080dae4805299e94&sxsrf=APpeQnuM791rpT_aQEp9Ny9BSj45P7ClZw:1790592879809&udm=2&fbs=ABfTbFXmzBGw9LECshVETHbdczUekrr4P3jxmDQ00QvQP6rDCfvRDF3m1JTFCpkx8Z4iq9zhL2WVxpvyM7bUx2m9DqWBh23JCnQShnxJs64FiD7l-rfNr49SYKeWV3qCiaEd61PA0D0jl7m92vrtd9I1uwsehWnNgE7n0Df83cnWurx88bzYwHDzLOc9ISVlWDyDp7P7GYChZSfelcJxM6aGpcm5xlDC1nfkH45ZppCtfP82Pwyh52Y&q=engagement",
+    image: "/prasangs/engagement.jpg",
   },
   {
     name: "Kankotri Lekhan",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://www.google.com/search?client=ms-android-nothing-terr1-reo3&hs=sPiq&sca_esv=080dae4805299e94&sxsrf=APpeQntZdkLDN0kYMYk3H301rG-uOpJ-LA:1790592907583&udm=2&fbs=ABfTbFVyMZGZf1hfvX9uKjN_-G8c4u0nXx4bEIpwm1lnNH832VstEKsVDqPorK0Gahnm2nq-aQnTz_mBV-EZYISbLc-StUIq_PhL7hb0Qt0YiIGOHkJjnTZ-cOFt4MBdBh9xxUSVRKmiEusZuD8DlVlOopefENvkiM3UgC_ep-24yehGm1ryqNEd5H2ziPusS84gJQMy7Mt2qU02wrAARl5mmE-5i7hhPffmt2bjoXn9viPnBdbTsEw&q=kankotri+lekhan",
+    image: "/prasangs/kankotri-lekhan.jpg",
   },
   {
     name: "Mehendi",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://www.google.com/search?q=mehendi+decoration&client=ms-android-nothing-terr1-reo3&hs=akNB&sca_esv=080dae4805299e94&udm=2&biw=411&bih=783",
+    image: "/prasangs/mehendi.jpg",
   },
   {
     name: "Haldi",
     category: "Wedding & Pre-Wedding",
-    image:
-      "https://www.google.com/search?sa=X&sca_esv=080dae4805299e94&udm=2&q=haldi+decoration+balloons&biw=411&bih=783",
+    image: "/prasangs/haldi.jpg",
   },
-
-  // TEMPORARY PLACEHOLDERS
   {
     name: "Sangeet",
     category: "Wedding & Pre-Wedding",
-    image: "",
-  },
-  {
-    name: "Mandva",
-    category: "Wedding & Pre-Wedding",
-    image: "",
+    image: "/prasangs/sangeet.jpg",
   },
   {
     name: "Ganesh Puja",
     category: "Wedding & Pre-Wedding",
-    image: "",
+    image: "/prasangs/ganesh-puja.jpg",
+  },
+  {
+    name: "Mata Ki Chowki",
+    category: "Wedding & Pre-Wedding",
+    image: "/prasangs/mata-ki-chowki.jpg",
   },
   {
     name: "Mameru",
     category: "Wedding & Pre-Wedding",
-    image: "",
+    image: "/prasangs/mameru.jpg",
   },
   {
     name: "Shadi",
     category: "Wedding & Pre-Wedding",
-    image: "",
+    image: "/prasangs/shadi.jpg",
   },
   {
     name: "Wedding Reception",
     category: "Wedding & Pre-Wedding",
-    image: "",
+    image: "/prasangs/wedding-reception.jpg",
   },
   {
     name: "Bachelorette",
     category: "Wedding & Pre-Wedding",
-    image: "",
+    image: "/prasangs/bachelorette.jpg",
   },
+
+  // TRADITIONAL & FAMILY
   {
     name: "Janoi / Upanayan Sanskar",
     category: "Traditional & Family",
-    image: "",
+    image: "/prasangs/janoi.jpg",
   },
   {
     name: "Annaprashan",
     category: "Traditional & Family",
-    image: "",
+    image: "/prasangs/annaprashan.jpg",
   },
   {
     name: "Mundan Ceremony",
     category: "Traditional & Family",
-    image: "",
+    image: "/prasangs/mundan.jpg",
   },
   {
     name: "Housewarming",
     category: "Traditional & Family",
-    image: "",
+    image: "/prasangs/housewarming.jpg",
   },
   {
     name: "Puja & Religious Celebrations",
     category: "Traditional & Family",
-    image: "",
+    image: "/prasangs/puja.jpg",
   },
+  {
+    name: "Jiyanu",
+    category: "Traditional & Family",
+    image: "/prasangs/jiyanu.jpg",
+  },
+
+  // BABY & MILESTONES
   {
     name: "Baby Shower",
     category: "Baby & Milestones",
-    image: "",
+    image: "/prasangs/baby-shower.jpg",
   },
   {
     name: "Naming Ceremony",
     category: "Baby & Milestones",
-    image: "",
+    image: "/prasangs/naming-ceremony.jpg",
   },
   {
     name: "Birthday",
     category: "Baby & Milestones",
-    image: "",
+    image: "/prasangs/birthday.jpg",
   },
   {
     name: "Anniversary",
     category: "Baby & Milestones",
-    image: "",
+    image: "/prasangs/anniversary.jpg",
   },
 ];
 
@@ -131,7 +135,16 @@ export default function ShubhPrasangPage() {
       {/* HERO */}
       <section className="relative min-h-[72vh] overflow-hidden bg-[#18352f]">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102c27] via-[#18352f]/90 to-[#18352f]/70" />
+          <Image
+            src="/prasangs/shubh-prasang-hero.jpg"
+            alt="Shubh Prasang celebrations"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover opacity-55"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-[#102c27]/90 via-[#18352f]/60 to-[#18352f]/30" />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-7xl items-end px-6 pb-20 md:px-12 md:pb-28">
@@ -178,9 +191,10 @@ export default function ShubhPrasangPage() {
         </div>
       </section>
 
-      {/* PRASANGS */}
+      {/* PRASANG CATEGORIES */}
       <section className="px-6 pb-24 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
+
           {categories.map((category) => {
             const categoryPrasangs = prasangs.filter(
               (prasang) => prasang.category === category
@@ -188,6 +202,8 @@ export default function ShubhPrasangPage() {
 
             return (
               <div key={category} className="mb-20 last:mb-0">
+
+                {/* CATEGORY HEADING */}
                 <div className="mb-8">
                   <p className="mb-2 text-xs uppercase tracking-[0.28em] text-[#b9995b]">
                     Explore
@@ -198,55 +214,60 @@ export default function ShubhPrasangPage() {
                   </h2>
                 </div>
 
+                {/* CARDS */}
                 <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
                   {categoryPrasangs.map((prasang) => (
                     <Link
                       key={prasang.name}
                       href="#"
                       className="group block"
                     >
-                      <div className="relative aspect-[4/5] overflow-hidden bg-[#ddd6ca]">
-                        {prasang.image ? (
-                          <img
-                            src={prasang.image}
-                            alt={prasang.name}
-                            className="absolute inset-0 h-full w-full object-cover transition duration-700 ease-out group-hover:scale-105"
-                          />
-                        ) : (
-                          <div className="absolute inset-0 flex items-center justify-center bg-[#e9e3d9]">
-                            <span className="px-6 text-center font-serif text-xl text-[#18352f]/50">
-                              Image coming soon
-                            </span>
-                          </div>
-                        )}
+                      <div className="relative aspect-[4/5] overflow-hidden bg-[#e9e3d9]">
 
+                        <Image
+                          src={prasang.image}
+                          alt={prasang.name}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                          className="object-cover transition duration-700 ease-out group-hover:scale-105"
+                        />
+
+                        {/* OVERLAY */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#102c27]/90 via-transparent to-transparent" />
 
+                        {/* CARD TEXT */}
                         <div className="absolute bottom-0 left-0 right-0 p-6">
+
                           <h3 className="font-serif text-2xl text-[#fbf8f2]">
                             {prasang.name}
                           </h3>
 
                           <div className="mt-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#e5cd98]">
                             Explore
+
                             <span className="transition-transform duration-300 group-hover:translate-x-2">
                               →
                             </span>
                           </div>
+
                         </div>
                       </div>
                     </Link>
                   ))}
+
                 </div>
               </div>
             );
           })}
+
         </div>
       </section>
 
       {/* BRAND STATEMENT */}
       <section className="bg-[#18352f] px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-4xl text-center">
+
           <p className="font-serif text-3xl leading-relaxed text-[#fbf8f2] md:text-5xl">
             From a thoughtfully presented thali to a beautifully curated
             celebration,{" "}
@@ -254,12 +275,14 @@ export default function ShubhPrasangPage() {
               we take care of the details that make the moment yours.
             </span>
           </p>
+
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CONNECT CTA */}
       <section className="px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
+
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#b9995b]">
             Planning a celebration?
           </p>
@@ -280,6 +303,7 @@ export default function ShubhPrasangPage() {
             Connect With Us
             <span>→</span>
           </Link>
+
         </div>
       </section>
 
