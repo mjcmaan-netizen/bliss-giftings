@@ -66,65 +66,62 @@ const prasangs = [
     image: "/prasangs/bachelorette.jpg",
   },
 
-  // TRADITIONAL & FAMILY
+  // TRADITIONAL & FAMILY CELEBRATIONS
   {
     name: "Janoi / Upanayan Sanskar",
-    category: "Traditional & Family",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/janoi.jpg",
   },
   {
     name: "Annaprashan",
-    category: "Traditional & Family",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/annaprashan.jpg",
   },
   {
     name: "Mundan Ceremony",
-    category: "Traditional & Family",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/mundan.jpg",
   },
   {
     name: "Housewarming",
-    category: "Traditional & Family",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/housewarming.jpg",
   },
   {
     name: "Puja & Religious Celebrations",
-    category: "Traditional & Family",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/puja.jpg",
   },
   {
     name: "Jiyanu",
-    category: "Traditional & Family",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/jiyanu.jpg",
   },
-
-  // BABY & MILESTONES
   {
     name: "Baby Shower",
-    category: "Baby & Milestones",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/baby-shower.jpg",
   },
   {
     name: "Naming Ceremony",
-    category: "Baby & Milestones",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/naming-ceremony.jpg",
   },
   {
     name: "Birthday",
-    category: "Baby & Milestones",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/birthday.jpg",
   },
   {
     name: "Anniversary",
-    category: "Baby & Milestones",
+    category: "Traditional & Family Celebrations",
     image: "/prasangs/anniversary.jpg",
   },
 ];
 
 const categories = [
   "Wedding & Pre-Wedding",
-  "Traditional & Family",
-  "Baby & Milestones",
+  "Traditional & Family Celebrations",
 ];
 
 export default function ShubhPrasangPage() {
@@ -156,9 +153,7 @@ export default function ShubhPrasangPage() {
             <h1 className="font-serif text-5xl leading-[1.05] text-[#fbf8f2] md:text-7xl lg:text-8xl">
               Every celebration
               <br />
-              <span className="text-[#e5cd98]">
-                has a story.
-              </span>
+              <span className="text-[#e5cd98]">has a story.</span>
             </h1>
 
             <p className="mt-7 max-w-2xl text-base leading-8 text-[#f0ece4] md:text-lg">
@@ -194,17 +189,15 @@ export default function ShubhPrasangPage() {
       {/* PRASANG CATEGORIES */}
       <section className="px-6 pb-24 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
-
           {categories.map((category) => {
             const categoryPrasangs = prasangs.filter(
               (prasang) => prasang.category === category
             );
 
             return (
-              <div key={category} className="mb-20 last:mb-0">
-
+              <div key={category} className="mb-24 last:mb-0">
                 {/* CATEGORY HEADING */}
-                <div className="mb-8">
+                <div className="mb-10">
                   <p className="mb-2 text-xs uppercase tracking-[0.28em] text-[#b9995b]">
                     Explore
                   </p>
@@ -216,7 +209,6 @@ export default function ShubhPrasangPage() {
 
                 {/* CARDS */}
                 <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-
                   {categoryPrasangs.map((prasang) => (
                     <Link
                       key={prasang.name}
@@ -224,7 +216,6 @@ export default function ShubhPrasangPage() {
                       className="group block"
                     >
                       <div className="relative aspect-[4/5] overflow-hidden bg-[#e9e3d9]">
-
                         <Image
                           src={prasang.image}
                           alt={prasang.name}
@@ -233,12 +224,11 @@ export default function ShubhPrasangPage() {
                           className="object-cover transition duration-700 ease-out group-hover:scale-105"
                         />
 
-                        {/* OVERLAY */}
+                        {/* IMAGE OVERLAY */}
                         <div className="absolute inset-0 bg-gradient-to-t from-[#102c27]/90 via-transparent to-transparent" />
 
-                        {/* CARD TEXT */}
+                        {/* CARD CONTENT */}
                         <div className="absolute bottom-0 left-0 right-0 p-6">
-
                           <h3 className="font-serif text-2xl text-[#fbf8f2]">
                             {prasang.name}
                           </h3>
@@ -250,24 +240,20 @@ export default function ShubhPrasangPage() {
                               →
                             </span>
                           </div>
-
                         </div>
                       </div>
                     </Link>
                   ))}
-
                 </div>
               </div>
             );
           })}
-
         </div>
       </section>
 
       {/* BRAND STATEMENT */}
       <section className="bg-[#18352f] px-6 py-24 md:px-12 md:py-32">
         <div className="mx-auto max-w-4xl text-center">
-
           <p className="font-serif text-3xl leading-relaxed text-[#fbf8f2] md:text-5xl">
             From a thoughtfully presented thali to a beautifully curated
             celebration,{" "}
@@ -275,14 +261,12 @@ export default function ShubhPrasangPage() {
               we take care of the details that make the moment yours.
             </span>
           </p>
-
         </div>
       </section>
 
       {/* CONNECT CTA */}
       <section className="px-6 py-20 md:px-12 md:py-28">
         <div className="mx-auto max-w-4xl text-center">
-
           <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#b9995b]">
             Planning a celebration?
           </p>
@@ -303,7 +287,6 @@ export default function ShubhPrasangPage() {
             Connect With Us
             <span>→</span>
           </Link>
-
         </div>
       </section>
 
