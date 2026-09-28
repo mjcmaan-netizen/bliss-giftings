@@ -1,11 +1,18 @@
 import Image from "next/image";
-import { getCandles, getCandleImagePath, getWhatsAppOrderLink } from "@/lib/candles";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import {
+  getCandles,
+  getCandleImagePath,
+  getWhatsAppOrderLink,
+} from "@/lib/candles";
 
 export default async function CandlesPage() {
   const candles = await getCandles();
 
   return (
     <main className="min-h-screen bg-[#f7f3ec] text-[#30433d]">
+      <Navbar />
 
       {/* HERO */}
       <section className="relative overflow-hidden bg-[#18352f] px-6 py-24 md:px-12 md:py-32">
@@ -17,12 +24,14 @@ export default async function CandlesPage() {
           <h1 className="max-w-4xl font-serif text-5xl leading-[1.05] text-[#fbf8f2] md:text-7xl">
             Candles made to
             <br />
-            <span className="text-[#e5cd98]">make moments beautiful.</span>
+            <span className="text-[#e5cd98]">
+              make moments beautiful.
+            </span>
           </h1>
 
           <p className="mt-7 max-w-2xl text-base leading-8 text-[#e8e4dc] md:text-lg">
-            Handcrafted candles thoughtfully created for gifting, celebrations,
-            return favours and the moments you want to remember.
+            Handcrafted candles thoughtfully created for gifting,
+            celebrations, return favours and the moments you want to remember.
           </p>
         </div>
       </section>
@@ -51,6 +60,7 @@ export default async function CandlesPage() {
               <p className="font-serif text-2xl text-[#18352f]">
                 Our candle collection is being updated.
               </p>
+
               <p className="mt-3 text-sm text-[#66736e]">
                 Please check back shortly.
               </p>
@@ -77,7 +87,6 @@ export default async function CandlesPage() {
                         className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
                       />
 
-                      {/* Image code */}
                       <div className="absolute left-4 top-4">
                         <span className="bg-[#fbf8f2]/90 px-3 py-1.5 text-[10px] uppercase tracking-[0.2em] text-[#18352f] backdrop-blur-sm">
                           {candle.imageCode}
@@ -107,7 +116,7 @@ export default async function CandlesPage() {
                         </span>
                       </div>
 
-                      {/* LEARN MORE */}
+                      {/* WHATSAPP CTA */}
                       <div className="mt-auto pt-6">
                         <a
                           href={whatsappLink}
@@ -130,7 +139,7 @@ export default async function CandlesPage() {
         </div>
       </section>
 
-      {/* SHIPPING / CUSTOMISATION */}
+      {/* SHIPPING + CUSTOMISATION */}
       <section className="border-t border-[#ddd5c8] bg-[#fbf8f2] px-6 py-16 md:px-12">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-2">
 
@@ -138,9 +147,11 @@ export default async function CandlesPage() {
             <p className="mb-3 text-xs uppercase tracking-[0.25em] text-[#b9995b]">
               Shipping
             </p>
+
             <h3 className="font-serif text-2xl text-[#18352f]">
               Worldwide delivery
             </h3>
+
             <p className="mt-3 text-sm leading-6 text-[#66736e]">
               Worldwide shipping available. Shipping charges extra.
             </p>
@@ -150,9 +161,11 @@ export default async function CandlesPage() {
             <p className="mb-3 text-xs uppercase tracking-[0.25em] text-[#b9995b]">
               Customisation
             </p>
+
             <h3 className="font-serif text-2xl text-[#18352f]">
               Made your way
             </h3>
+
             <p className="mt-3 text-sm leading-6 text-[#66736e]">
               Colour and fragrance can be customised at additional charges.
             </p>
@@ -161,6 +174,8 @@ export default async function CandlesPage() {
         </div>
       </section>
 
+      {/* FOOTER */}
+      <Footer />
     </main>
   );
 }
