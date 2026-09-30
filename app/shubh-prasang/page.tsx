@@ -1,128 +1,207 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const prasangs = [
-  // WEDDING & PRE-WEDDING
+const weddingPrasangs = [
   {
     name: "Baat Pakki",
-    category: "Wedding & Pre-Wedding",
-    image: "/products/prasangs/baat-pakki.jpg",
-  },
-  {
-    name: "Engagement",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/engagement.jpg",
+    href: "/shubh-prasang/baat-pakki",
   },
   {
     name: "Kankotri Lekhan",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/kankotri-lekhan.jpg",
+    href: "#",
   },
   {
     name: "Mehendi",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/mehendi.jpg",
+    href: "#",
   },
   {
     name: "Haldi",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/haldi.jpg",
+    href: "#",
   },
   {
     name: "Sangeet",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/sangeet.jpg",
+    href: "#",
   },
   {
     name: "Ganesh Puja",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/ganesh-puja.jpg",
+    href: "#",
   },
   {
     name: "Mata Ki Chowki",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/mata-ki-chowki.jpg",
+    href: "#",
   },
   {
     name: "Mameru",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/mameru.jpg",
+    href: "#",
   },
   {
     name: "Shadi",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/shadi.jpg",
+    href: "#",
   },
   {
     name: "Wedding Reception",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/wedding-reception.jpg",
+    href: "#",
   },
   {
     name: "Bachelorette",
-    category: "Wedding & Pre-Wedding",
     image: "/products/prasangs/bachelorette.jpg",
+    href: "#",
   },
+];
 
-  // TRADITIONAL & FAMILY CELEBRATIONS
+const familyPrasangs = [
   {
     name: "Janoi / Upanayan Sanskar",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/janoi.jpg",
+    href: "#",
   },
   {
     name: "Annaprashan",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/annaprashan.jpg",
+    href: "#",
   },
   {
     name: "Mundan Ceremony",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/mundan.jpg",
+    href: "#",
   },
   {
     name: "Housewarming",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/housewarming.jpg",
+    href: "#",
   },
   {
     name: "Puja & Religious Celebrations",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/puja.jpg",
+    href: "#",
   },
   {
     name: "Jiyanu",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/jiyanu.jpg",
+    href: "#",
   },
   {
     name: "Baby Shower",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/baby-shower.jpg",
+    href: "#",
   },
   {
     name: "Naming Ceremony",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/naming-ceremony.jpg",
+    href: "#",
   },
   {
     name: "Birthday",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/birthday.jpg",
+    href: "#",
   },
   {
     name: "Anniversary",
-    category: "Traditional & Family Celebrations",
     image: "/products/prasangs/anniversary.jpg",
+    href: "#",
   },
 ];
 
-const categories = [
-  "Wedding & Pre-Wedding",
-  "Traditional & Family Celebrations",
-];
+function PrasangCard({
+  name,
+  image,
+  href,
+}: {
+  name: string;
+  image: string;
+  href: string;
+}) {
+  return (
+    <Link
+      href={href}
+      className="group block overflow-hidden rounded-[2px] bg-white"
+    >
+      <div className="relative aspect-[4/5] overflow-hidden">
+        <Image
+          src={image}
+          alt={name}
+          fill
+          className="object-cover transition duration-700 group-hover:scale-105"
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+        <div className="absolute bottom-0 left-0 right-0 p-5">
+          <h3 className="font-serif text-xl text-white sm:text-2xl">
+            {name}
+          </h3>
+
+          <div className="mt-2 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#e5cd98]">
+            Explore
+            <span className="transition-transform duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </div>
+        </div>
+      </div>
+    </Link>
+  );
+}
+
+function PrasangSection({
+  title,
+  subtitle,
+  items,
+}: {
+  title: string;
+  subtitle: string;
+  items: {
+    name: string;
+    image: string;
+    href: string;
+  }[];
+}) {
+  return (
+    <section className="px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-10 max-w-2xl">
+          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-[#b9995b]">
+            Bliss Giftings
+          </p>
+
+          <h2 className="font-serif text-4xl text-[#18352f] sm:text-5xl">
+            {title}
+          </h2>
+
+          <p className="mt-4 text-sm leading-7 text-[#30433d]/75 sm:text-base">
+            {subtitle}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5">
+          {items.map((item) => (
+            <PrasangCard
+              key={item.name}
+              name={item.name}
+              image={item.image}
+              href={item.href}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function ShubhPrasangPage() {
   return (
@@ -130,167 +209,100 @@ export default function ShubhPrasangPage() {
       <Navbar />
 
       {/* HERO */}
-      <section className="relative min-h-[72vh] overflow-hidden bg-[#18352f]">
-        <div className="absolute inset-0">
-          <Image
-            src="/products/prasangs/shubh-prasang-hero.jpg"
-            alt="Shubh Prasang celebrations"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-55"
-          />
+      <section className="relative min-h-[70vh] overflow-hidden">
+        <Image
+          src="/products/prasangs/shubh-prasang-hero.jpg"
+          alt="Shubh Prasang by Bliss Giftings"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102c27]/90 via-[#18352f]/60 to-[#18352f]/30" />
-        </div>
+        <div className="absolute inset-0 bg-black/35" />
 
-        <div className="relative z-10 mx-auto flex min-h-[72vh] max-w-7xl items-end px-6 pb-20 md:px-12 md:pb-28">
-          <div className="max-w-3xl">
-            <p className="mb-5 text-xs uppercase tracking-[0.35em] text-[#e5cd98]">
+        <div className="relative z-10 flex min-h-[70vh] items-end px-6 pb-16 sm:px-10 lg:px-16 lg:pb-20">
+          <div className="max-w-3xl text-white">
+            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-[#e5cd98]">
               Shubh Prasang
             </p>
 
-            <h1 className="font-serif text-5xl leading-[1.05] text-[#fbf8f2] md:text-7xl lg:text-8xl">
-              Every celebration
+            <h1 className="font-serif text-5xl leading-tight sm:text-6xl lg:text-7xl">
+              For the moments
               <br />
-              <span className="text-[#e5cd98]">has a story.</span>
+              worth remembering.
             </h1>
 
-            <p className="mt-7 max-w-2xl text-base leading-8 text-[#f0ece4] md:text-lg">
-              From the first family gathering to the wedding day and every
-              beautiful milestone in between, we create thoughtful details
-              that make every Shubh Prasang feel truly yours.
+            <p className="mt-6 max-w-xl text-sm leading-7 text-white/85 sm:text-base">
+              Thoughtfully designed gifting, presentations, keepsakes and
+              experiences for life&apos;s most meaningful celebrations.
             </p>
           </div>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="px-6 py-20 md:px-12 md:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#b9995b]">
-            Celebrate Your Way
+      <section className="px-6 py-16 text-center sm:px-10 lg:py-24">
+        <div className="mx-auto max-w-3xl">
+          <p className="text-xs uppercase tracking-[0.3em] text-[#b9995b]">
+            Celebrate beautifully
           </p>
 
-          <h2 className="font-serif text-4xl leading-tight text-[#18352f] md:text-5xl">
-            Thoughtfully created for
-            <br className="hidden md:block" />
-            life&apos;s most meaningful moments.
+          <h2 className="mt-4 font-serif text-4xl leading-tight text-[#18352f] sm:text-5xl">
+            Every celebration has its own story.
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[#66736e]">
-            Explore our celebrations and discover gifting, presentations,
-            keepsakes, candles, experiences and beautifully considered details
-            created for each occasion.
+          <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-[#30433d]/75 sm:text-base">
+            From the first formal shagun to weddings, milestones and family
+            traditions, Bliss Giftings creates thoughtful details that make
+            each occasion feel personal.
           </p>
         </div>
       </section>
 
-      {/* PRASANG CATEGORIES */}
-      <section className="px-6 pb-24 md:px-12 md:pb-32">
-        <div className="mx-auto max-w-7xl">
-          {categories.map((category) => {
-            const categoryPrasangs = prasangs.filter(
-              (prasang) => prasang.category === category
-            );
+      {/* WEDDING & PRE-WEDDING */}
+      <PrasangSection
+        title="Wedding & Pre-Wedding"
+        subtitle="Elegant gifting and celebration details for the occasions that lead up to the big day and the moments surrounding it."
+        items={weddingPrasangs}
+      />
 
-            return (
-              <div key={category} className="mb-24 last:mb-0">
-                {/* CATEGORY HEADING */}
-                <div className="mb-10">
-                  <p className="mb-2 text-xs uppercase tracking-[0.28em] text-[#b9995b]">
-                    Explore
-                  </p>
+      <div className="mx-auto max-w-7xl border-t border-[#b9995b]/20" />
 
-                  <h2 className="font-serif text-3xl text-[#18352f] md:text-4xl">
-                    {category}
-                  </h2>
-                </div>
+      {/* TRADITIONAL & FAMILY */}
+      <PrasangSection
+        title="Traditional & Family Celebrations"
+        subtitle="Thoughtful gifting and keepsakes for cherished family traditions, milestones and celebrations."
+        items={familyPrasangs}
+      />
 
-                {/* CARDS */}
-                <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {categoryPrasangs.map((prasang) => (
-                    <Link
-                      key={prasang.name}
-                      href="#"
-                      className="group block"
-                    >
-                      <div className="relative aspect-[4/5] overflow-hidden bg-[#e9e3d9]">
-                        <Image
-                          src={prasang.image}
-                          alt={prasang.name}
-                          fill
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                          className="object-cover transition duration-700 ease-out group-hover:scale-105"
-                        />
+      {/* CTA */}
+      <section className="bg-[#18352f] px-6 py-20 text-center text-white sm:px-10 lg:py-28">
+        <p className="text-xs uppercase tracking-[0.3em] text-[#e5cd98]">
+          Create something memorable
+        </p>
 
-                        {/* IMAGE OVERLAY */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#102c27]/90 via-transparent to-transparent" />
+        <h2 className="mx-auto mt-4 max-w-3xl font-serif text-4xl leading-tight sm:text-5xl">
+          Have a celebration in mind?
+        </h2>
 
-                        {/* CARD CONTENT */}
-                        <div className="absolute bottom-0 left-0 right-0 p-6">
-                          <h3 className="font-serif text-2xl text-[#fbf8f2]">
-                            {prasang.name}
-                          </h3>
+        <p className="mx-auto mt-5 max-w-xl text-sm leading-7 text-white/75 sm:text-base">
+          Tell us about your occasion and we&apos;ll help you create the
+          gifting and celebration details around it.
+        </p>
 
-                          <div className="mt-3 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[#e5cd98]">
-                            Explore
-
-                            <span className="transition-transform duration-300 group-hover:translate-x-2">
-                              →
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* BRAND STATEMENT */}
-      <section className="bg-[#18352f] px-6 py-24 md:px-12 md:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="font-serif text-3xl leading-relaxed text-[#fbf8f2] md:text-5xl">
-            From a thoughtfully presented thali to a beautifully curated
-            celebration,{" "}
-            <span className="text-[#e5cd98]">
-              we take care of the details that make the moment yours.
-            </span>
-          </p>
-        </div>
-      </section>
-
-      {/* CONNECT CTA */}
-      <section className="px-6 py-20 md:px-12 md:py-28">
-        <div className="mx-auto max-w-4xl text-center">
-          <p className="mb-4 text-xs uppercase tracking-[0.3em] text-[#b9995b]">
-            Planning a celebration?
-          </p>
-
-          <h2 className="font-serif text-4xl text-[#18352f] md:text-5xl">
-            Let&apos;s create something beautiful.
-          </h2>
-
-          <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-[#66736e]">
-            Tell us about your occasion and let&apos;s bring your ideas,
-            traditions and celebrations together.
-          </p>
-
-          <Link
-            href="/connect"
-            className="mt-8 inline-flex items-center gap-3 border border-[#18352f] px-7 py-4 text-xs uppercase tracking-[0.22em] text-[#18352f] transition duration-300 hover:bg-[#18352f] hover:text-[#fbf8f2]"
-          >
-            Connect With Us
-            <span>→</span>
-          </Link>
-        </div>
+        <a
+          href="https://wa.me/919998920644"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex items-center gap-3 border border-[#e5cd98] px-7 py-3 text-xs uppercase tracking-[0.2em] text-[#e5cd98] transition hover:bg-[#e5cd98] hover:text-[#18352f]"
+        >
+          Connect on WhatsApp
+          <span>→</span>
+        </a>
       </section>
 
       <Footer />
     </main>
   );
-        }
+}
